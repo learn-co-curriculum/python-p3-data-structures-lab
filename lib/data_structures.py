@@ -33,7 +33,7 @@ def get_spicy_food_by_cuisine(spicy_foods, cuisine):
 
 def sort_by_heat(spicy_foods):
     heat_level = lambda food: food["heat_level"]
-    return spicy_foods.sort(key=heat_level)
+    return sorted(spicy_foods, key=heat_level)
 
 def print_spiciest_foods(spicy_foods):
     spiciest_foods = get_spiciest_foods(spicy_foods)
