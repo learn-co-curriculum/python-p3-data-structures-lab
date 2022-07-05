@@ -2,7 +2,8 @@
 
 ## Learning Goals
 
-- Practice using built-in methods for data structures in Python.
+- Practice using comprehensions and built-in methods for data structures in
+Python.
 - Execute and test Python code using the Python shell and `pytest`.
 
 ***
@@ -58,10 +59,11 @@ spicy_foods = [
     }
 ]
 ```
- 
-Practice using Python `list` and `dict` methods to solve these deliverables.
-You _could_ use a loop to solve all of these, but try to expand your toolkit
-and use some other methods to make the job easier, like `get()`, `append()`,
+
+Practice using Python list comprehensions alongside `list` and `dict` methods
+to solve these deliverables. You _could_ use a loop to solve all of these, but
+try to expand your toolkit and use some other methods to make the job easier,
+like `get()`, `append()`,
 and `sort()`.
 
 ### `get_names()`
@@ -74,9 +76,9 @@ get_names(spicy_foods)
 # => ["Green Curry", "Buffalo Wings", "Mapo Tofu"]
 ```
 
-### `spiciest_foods()`
+### `get_spiciest_foods()`
 
-Define a function `spiciest_foods()` that a list of `spicy_foods()` and
+Define a function `spiciest_foods()` that a list of `spicy_foods` and
 **returns a list of dictionaries** where the heat level of the food is greater
 than 5.
 
@@ -155,7 +157,7 @@ print_spiciest_foods(spicy_foods)
 # Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶
 ```
 
-### `average_heat_level()`
+### `get_average_heat_level()`
 
 Define a function `average_heat_level()` that takes a list of `spicy_foods` and
 **returns an integer** representing the average heat level of all the spicy
