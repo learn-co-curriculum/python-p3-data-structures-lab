@@ -2,8 +2,10 @@
 
 ## Learning Goals
 
-- 
+- Practice using built-in methods for data structures in Python.
 - Execute and test Python code using the Python shell and `pytest`.
+
+***
 
 ## Key Vocab
 
@@ -25,7 +27,7 @@ data.
 - **String**: an immutable data type in Python that stores unicode characters
 in a fixed pattern. Iterable and indexed, just like other sequences.
 
-## Introduction
+***
 
 ## Instructions
 
@@ -34,8 +36,143 @@ the `lib` folder. Run `pytest -x` to check your work. Your goal is to practice
 manipulating sequences with the Python tools you've learned about in this
 lesson and the lessons before.
 
+In `data_structures.py`, there is a list of dictionaries representing
+different spicy foods.
+
+```py
+spicy_foods = [
+    {
+        "name": "Green Curry",
+        "cuisine": "Thai",
+        "heat_level": 9,
+    },
+    {
+        "name": "Buffalo Wings",
+        "cuisine": "American",
+        "heat_level": 3,
+    },
+    {
+        "name": "Mapo Tofu",
+        "cuisine": "Sichuan",
+        "heat_level": 6,
+    }
+]
+```
+ 
+Practice using Python `list` and `dict` methods to solve these deliverables.
+You _could_ use a loop to solve all of these, but try to expand your toolkit
+and use some other methods to make the job easier, like `get()`, `append()`,
+and `sort()`.
+
+### `get_names()`
+
+Define a function `get_names()` that takes a list of `spicy_foods` and
+**returns a list of strings** with the names of each spicy food.
+
+```py
+get_names(spicy_foods)
+# => ["Green Curry", "Buffalo Wings", "Mapo Tofu"]
+```
+
+### `spiciest_foods()`
+
+Define a function `spiciest_foods()` that a list of `spicy_foods()` and
+**returns a list of dictionaries** where the heat level of the food is greater
+than 5.
+
+```py
+spiciest_foods(spicy_foods)
+# [{"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}, {"name": "Mapo Tofu", "cuisine": "Sichuan", "heat_level": 6}]
+```
+
+### `print_spicy_foods()`
+
+Define a function `print_spicy_foods()` that takes a list of `spicy_foods` and
+**output to the terminal** each spicy food in the following format using
+`print()`: `Buffalo Wings (American) | Heat Level: 🌶🌶🌶`.
+
+HINT: you can use [times (\*) with a string][string times] to produce the
+correct number of "🌶" emojis.
+
+For example:
+
+```py
+"hello" * 3 == "hellohellohello"
+# True
+```
+
+```py
+print_spicy_foods(spicy_foods)
+# Green Curry (Thai) | Heat Level: 🌶🌶🌶🌶🌶🌶🌶🌶🌶
+# Buffalo Wings (American) | Heat Level: 🌶🌶🌶
+# Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶
+```
+
+[string times]: https://linuxhint.com/how-do-you-repeat-a-string-n-times-in-python/#:~:text=In%20Python%2C%20we%20utilize%20the,n%20(number)%20of%20times.
+
+### `get_spicy_food_by_cuisine()`
+
+Define a function `get_spicy_food_by_cuisine()` that takes a list of
+`spicy_foods` and a string representing a `cuisine`, and **returns a single
+dictionary** for the spicy food whose cuisine matches the cuisine being passed
+to the method.
+
+```py
+get_spicy_food_by_cuisine(spicy_foods, "American")
+# {"name": "Buffalo Wings", "cuisine": "American", "heat_level": 3}
+
+get_spicy_food_by_cuisine(spicy_foods, "Thai")
+# {"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}
+```
+
+### `sort_by_heat()`
+
+Define a function `sort_by_heat()` that takes a list of `spicy_foods` and
+**returns a list of dictionaries** sorted by heat level from lowest to highest:
+
+```py
+sort_by_heat(spicy_foods)
+# [
+#   {"name": "Buffalo Wings", "cuisine": "American", "heat_level": 3},
+#   {"name": "Mapo Tofu", "cuisine": "Sichuan", "heat_level": 6},
+#   {"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}
+# ]
+```
+
+### `print_spiciest_foods()`
+
+Define a function `print_spiciest_foods()` that takes a list of `spicy_foods`
+and **outputs to the terminal** ONLY the spicy foods that have a heat level
+greater than 5, in the following format:
+
+`Buffalo Wings (American) | Heat Level: 🌶🌶🌶`.
+
+Try to use functions you've already written to solve this!
+
+```py
+print_spiciest_foods(spicy_foods)
+# Green Curry (Thai) | Heat Level: 🌶🌶🌶🌶🌶🌶🌶🌶🌶
+# Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶
+```
+
+### `average_heat_level()`
+
+Define a function `average_heat_level()` that takes a list of `spicy_foods` and
+**returns an integer** representing the average heat level of all the spicy
+foods in the array. Recall that to derive the average of a collection, you need
+to calculate the total and divide number of elements in the collection.
+
+```py
+average_heat_level(spicy_foods)
+# 6
+```
+
 When all of your tests are passing, submit your work using `git`.
+
+***
 
 ## Resources
 
-- 
+- [Python List/Array Methods - W3Schools](https://www.w3schools.com/python/python_ref_list.asp)
+- [Python Dictionary Methods - W3Schools](https://www.w3schools.com/python/python_ref_dictionary.asp)
+- [When to Use a List Comprehension in Python - Real Python](https://realpython.com/list-comprehension-python/)
