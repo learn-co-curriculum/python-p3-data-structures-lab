@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 from lib.data_structures import get_names, get_spiciest_foods, print_spicy_foods,\
-                                get_spicy_food_by_cuisine, print_spiciest_foods, \
-                                get_average_heat_level
+                                get_spicy_food_by_cuisine, \
+                                print_spiciest_foods, get_average_heat_level
+                                # sort_by_heat
 
 import io
 import sys
@@ -54,6 +55,26 @@ class TestDataStructures:
             "cuisine": "American",
             "heat_level": 3,
         })
+
+    # def test_sort_by_heat(self):
+    #     '''contains function sort_by_heat that returns a list sorted by heat_level.'''
+    #     assert(sort_by_heat(TestDataStructures.SPICY_FOODS) == [
+    #         {
+    #             "name": "Buffalo Wings",
+    #             "cuisine": "American",
+    #             "heat_level": 3,
+    #         },
+    #         {
+    #             "name": "Mapo Tofu",
+    #             "cuisine": "Sichuan",
+    #             "heat_level": 6,
+    #         },
+    #         {
+    #             "name": "Green Curry",
+    #             "cuisine": "Thai",
+    #             "heat_level": 9,
+    #         },
+    #     ])
 
     def test_print_spiciest_foods(self):
         '''contains function print_spiciest_foods that returns foods with heat_level over 5 formatted with 🌶  emojis.'''
