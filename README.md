@@ -127,20 +127,6 @@ get_spicy_food_by_cuisine(spicy_foods, "Thai")
 # {"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}
 ```
 
-### `sort_by_heat()`
-
-Define a function `sort_by_heat()` that takes a list of `spicy_foods` and
-**returns a list of dictionaries** sorted by heat level from lowest to highest:
-
-```py
-sort_by_heat(spicy_foods)
-# [
-#   {"name": "Buffalo Wings", "cuisine": "American", "heat_level": 3},
-#   {"name": "Mapo Tofu", "cuisine": "Sichuan", "heat_level": 6},
-#   {"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}
-# ]
-```
-
 ### `print_spiciest_foods()`
 
 Define a function `print_spiciest_foods()` that takes a list of `spicy_foods`
