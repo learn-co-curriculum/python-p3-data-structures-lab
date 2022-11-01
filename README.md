@@ -60,11 +60,8 @@ spicy_foods = [
 ]
 ```
 
-Practice using Python list comprehensions alongside `list` and `dict` methods
-to solve these deliverables. You _could_ use a loop to solve all of these, but
-try to expand your toolkit and use some other methods to make the job easier,
-like `get()`, `append()`,
-and `sort()`.
+Practice using loops and Python list comprehensions alongside `list` and `dict`
+methods to solve these deliverables.
 
 ### `get_names()`
 
