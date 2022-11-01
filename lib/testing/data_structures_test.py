@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from lib.data_structures import get_names, get_spiciest_foods, print_spicy_foods,\
+from data_structures import get_names, get_spiciest_foods, print_spicy_foods,\
                                 get_spicy_food_by_cuisine, print_spiciest_foods, \
                                 get_average_heat_level
 
