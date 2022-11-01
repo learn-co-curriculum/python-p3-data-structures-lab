@@ -75,12 +75,12 @@ get_names(spicy_foods)
 
 ### `get_spiciest_foods()`
 
-Define a function `spiciest_foods()` that a list of `spicy_foods` and
+Define a function `get_spiciest_foods()` that takes a list of `spicy_foods` and
 **returns a list of dictionaries** where the heat level of the food is greater
 than 5.
 
 ```py
-spiciest_foods(spicy_foods)
+get_spiciest_foods(spicy_foods)
 # [{"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}, {"name": "Mapo Tofu", "cuisine": "Sichuan", "heat_level": 6}]
 ```
 
