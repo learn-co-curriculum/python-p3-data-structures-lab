@@ -109,48 +109,6 @@ print_spicy_foods(spicy_foods)
 
 [string times]: https://linuxhint.com/how-do-you-repeat-a-string-n-times-in-python/#:~:text=In%20Python%2C%20we%20utilize%20the,n%20(number)%20of%20times.
 
-### `create_spicy_food()`
-
-Define a function `create_spicy_food()` that takes a list of `spicy_foods` and a
-new `spicy_food` and returns the original list with the new `spicy_food` added.
-
-Example:
-
-```py
-create_spicy_food(
-    spicy_foods,
-    {
-        'name': 'Griot',
-        'cuisine': 'Haitian',
-        'heat_level': 10,
-    }
-)
-
-# => [
-# =>     {
-# =>         "name": "Green Curry",
-# =>         "cuisine": "Thai",
-# =>         "heat_level": 9,
-# =>     },
-# =>     {
-# =>         "name": "Buffalo Wings",
-# =>         "cuisine": "American",
-# =>         "heat_level": 3,
-# =>     },
-# =>     {
-# =>         "name": "Mapo Tofu",
-# =>         "cuisine": "Sichuan",
-# =>         "heat_level": 6,
-# =>     },
-# =>     {
-# =>         'name': 'Griot',
-# =>         'cuisine': 'Haitian',
-# =>         'heat_level': 10,
-# =>     },
-# => ]
-
-```
-
 ### `get_spicy_food_by_cuisine()`
 
 Define a function `get_spicy_food_by_cuisine()` that takes a list of
@@ -192,6 +150,48 @@ to calculate the total and divide number of elements in the collection.
 ```py
 average_heat_level(spicy_foods)
 # => 6
+```
+
+### `create_spicy_food()`
+
+Define a function `create_spicy_food()` that takes a list of `spicy_foods` and a
+new `spicy_food` and returns the original list with the new `spicy_food` added.
+
+Example:
+
+```py
+create_spicy_food(
+    spicy_foods,
+    {
+        'name': 'Griot',
+        'cuisine': 'Haitian',
+        'heat_level': 10,
+    }
+)
+
+# => [
+# =>     {
+# =>         "name": "Green Curry",
+# =>         "cuisine": "Thai",
+# =>         "heat_level": 9,
+# =>     },
+# =>     {
+# =>         "name": "Buffalo Wings",
+# =>         "cuisine": "American",
+# =>         "heat_level": 3,
+# =>     },
+# =>     {
+# =>         "name": "Mapo Tofu",
+# =>         "cuisine": "Sichuan",
+# =>         "heat_level": 6,
+# =>     },
+# =>     {
+# =>         'name': 'Griot',
+# =>         'cuisine': 'Haitian',
+# =>         'heat_level': 10,
+# =>     },
+# => ]
+
 ```
 
 When all of your tests are passing, submit your work using `git`.
