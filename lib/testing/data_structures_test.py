@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 from data_structures import get_names, get_spiciest_foods, print_spicy_foods,\
-                                get_spicy_food_by_cuisine, print_spiciest_foods, \
-                                get_average_heat_level
+                                create_spicy_food, get_spicy_food_by_cuisine, \
+                                print_spiciest_foods, get_average_heat_level
 
 import io
 import sys
@@ -47,6 +47,40 @@ class TestDataStructures:
             "Buffalo Wings (American) | Heat Level: 🌶🌶🌶\n" +
             "Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶\n")
 
+    def test_create_spicy_food(self):
+        ''''''
+        new_spicy_foods = create_spicy_food(
+           TestDataStructures.SPICY_FOODS,
+            {
+                'name': 'Griot',
+                'cuisine': 'Haitian',
+                'heat_level': 10,
+            }
+        )
+
+        assert new_spicy_foods == [
+            {
+                "name": "Green Curry",
+                "cuisine": "Thai",
+                "heat_level": 9,
+            },
+            {
+                "name": "Buffalo Wings",
+                "cuisine": "American",
+                "heat_level": 3,
+            },
+            {
+                "name": "Mapo Tofu",
+                "cuisine": "Sichuan",
+                "heat_level": 6,
+            },
+            {
+                "name": "Griot",
+                "cuisine": "Haitian",
+                "heat_level": 10,
+            }
+        ]
+    
     def test_get_spicy_food_by_cuisine(self):
         '''contains function get_spicy_food_by_cuisine that returns the food that matches a cuisine.'''
         assert(get_spicy_food_by_cuisine(TestDataStructures.SPICY_FOODS, "American") == {

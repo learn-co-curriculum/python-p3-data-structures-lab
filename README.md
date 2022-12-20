@@ -33,7 +33,7 @@ in a fixed pattern. Iterable and indexed, just like other sequences.
 ## Instructions
 
 Time to get some practice! Write your code in the `data_structures.py` file in
-the `lib` folder. Run `pytest -x` to check your work. Your goal is to practice
+the `lib/` folder. Run `pytest -x` to check your work. Your goal is to practice
 manipulating sequences with the Python tools you've learned about in this
 lesson and the lessons before.
 
@@ -56,7 +56,7 @@ spicy_foods = [
         "name": "Mapo Tofu",
         "cuisine": "Sichuan",
         "heat_level": 6,
-    }
+    },
 ]
 ```
 
@@ -81,7 +81,7 @@ than 5.
 
 ```py
 get_spiciest_foods(spicy_foods)
-# [{"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}, {"name": "Mapo Tofu", "cuisine": "Sichuan", "heat_level": 6}]
+# => [{"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}, {"name": "Mapo Tofu", "cuisine": "Sichuan", "heat_level": 6}]
 ```
 
 ### `print_spicy_foods()`
@@ -97,17 +97,59 @@ For example:
 
 ```py
 "hello" * 3 == "hellohellohello"
-# True
+# => True
 ```
 
 ```py
 print_spicy_foods(spicy_foods)
-# Green Curry (Thai) | Heat Level: 🌶🌶🌶🌶🌶🌶🌶🌶🌶
-# Buffalo Wings (American) | Heat Level: 🌶🌶🌶
-# Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶
+# => Green Curry (Thai) | Heat Level: 🌶🌶🌶🌶🌶🌶🌶🌶🌶
+# => Buffalo Wings (American) | Heat Level: 🌶🌶🌶
+# => Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶
 ```
 
 [string times]: https://linuxhint.com/how-do-you-repeat-a-string-n-times-in-python/#:~:text=In%20Python%2C%20we%20utilize%20the,n%20(number)%20of%20times.
+
+### `create_spicy_food()`
+
+Define a function `create_spicy_food()` that takes a list of `spicy_foods` and a
+new `spicy_food` and returns the original list with the new `spicy_food` added.
+
+Example:
+
+```py
+create_spicy_food(
+    spicy_foods,
+    {
+        'name': 'Griot',
+        'cuisine': 'Haitian',
+        'heat_level': 10,
+    }
+)
+
+# => [
+# =>     {
+# =>         "name": "Green Curry",
+# =>         "cuisine": "Thai",
+# =>         "heat_level": 9,
+# =>     },
+# =>     {
+# =>         "name": "Buffalo Wings",
+# =>         "cuisine": "American",
+# =>         "heat_level": 3,
+# =>     },
+# =>     {
+# =>         "name": "Mapo Tofu",
+# =>         "cuisine": "Sichuan",
+# =>         "heat_level": 6,
+# =>     },
+# =>     {
+# =>         'name': 'Griot',
+# =>         'cuisine': 'Haitian',
+# =>         'heat_level': 10,
+# =>     },
+# => ]
+
+```
 
 ### `get_spicy_food_by_cuisine()`
 
@@ -118,10 +160,10 @@ to the method.
 
 ```py
 get_spicy_food_by_cuisine(spicy_foods, "American")
-# {"name": "Buffalo Wings", "cuisine": "American", "heat_level": 3}
+# => {"name": "Buffalo Wings", "cuisine": "American", "heat_level": 3}
 
 get_spicy_food_by_cuisine(spicy_foods, "Thai")
-# {"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}
+# => {"name": "Green Curry", "cuisine": "Thai", "heat_level": 9}
 ```
 
 ### `print_spiciest_foods()`
@@ -136,8 +178,8 @@ Try to use functions you've already written to solve this!
 
 ```py
 print_spiciest_foods(spicy_foods)
-# Green Curry (Thai) | Heat Level: 🌶🌶🌶🌶🌶🌶🌶🌶🌶
-# Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶
+# => Green Curry (Thai) | Heat Level: 🌶🌶🌶🌶🌶🌶🌶🌶🌶
+# => Mapo Tofu (Sichuan) | Heat Level: 🌶🌶🌶🌶🌶🌶
 ```
 
 ### `get_average_heat_level()`
@@ -149,7 +191,7 @@ to calculate the total and divide number of elements in the collection.
 
 ```py
 average_heat_level(spicy_foods)
-# 6
+# => 6
 ```
 
 When all of your tests are passing, submit your work using `git`.

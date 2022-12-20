@@ -13,7 +13,7 @@ spicy_foods = [
         "name": "Mapo Tofu",
         "cuisine": "Sichuan",
         "heat_level": 6,
-    }
+    },
 ]
 
 def get_names(spicy_foods):
@@ -23,6 +23,9 @@ def get_spiciest_foods(spicy_foods):
     pass
 
 def print_spicy_foods(spicy_foods):
+    pass
+
+def create_spicy_food(spicy_foods, spicy_food):
     pass
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine):
